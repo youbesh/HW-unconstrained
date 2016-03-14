@@ -1,40 +1,61 @@
 
 
 
-
-
-module maxlikeTest
-
-	using FactCheck, maxlike
+context("basics") do
 
 	facts("Test Data Construction") do
 
-		d = makeData(18)
-		@fact d["n"] --> 18
 
-		@fact mean(d["y"]) < 1 --> true
 	end
 
 	facts("Test Return value of likelihood") do
 
-		# likelihood should return a real number
 
 	end
 
 	facts("Test return value of gradient") do
 		# gradient should not return anything,
 		# but modify a vector in place.
-		d = makeData()
-		gradvec = rand(length(d["beta"]))
-		testvec = deepcopy(gradvec)
-		r = maxlike.grad(d["beta"],gradvec,d["X"],d["y"],d["dist"])
 
-		@fact r --> nothing 
 
-		@fact gradvec --> not(testvec)
+	end
+end
+
+context("test maximization results") do
+
+	facts("maximize returns approximate result") do
+                              
+                     
+                                                  
+	end
+
+	facts("maximize_grad returns accurate result") do
+                                   
+                     
+                                                  
+	end
+
+	facts("maximize_grad_hess returns accurate result") do
+                                   
+                     
+                                                  
+	end
+
+end
+
+context("test against GLM") do
+	# create data and use the GLM package
+	# probit example is on the github page
+
+	facts("estimates vs GLM") do
+
 
 	end
 
-	FactCheck.exitstatus()
+	facts("standard errors vs GLM") do
+
+
+	end
 
 end
+

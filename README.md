@@ -6,6 +6,8 @@
 
 ## Questions branch
 
+[![Join the chat at https://gitter.im/ScPo-CompEcon/HW-unconstrained](https://badges.gitter.im/ScPo-CompEcon/HW-unconstrained.svg)](https://gitter.im/ScPo-CompEcon/HW-unconstrained?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 * In this homework you will implement the maximum likelihood estimator for the probit model.
 * Clearly there are many packaged solutions for this problem out there, which are very robust and efficient. Nevertheless it is a good exercise to try maximum likelihood out, precisely because we can compare the results to packaged solutions.
 * any non-standard maximum likelihood problem you might encounter will be very similar to the steps involved here, so there is something to learn.

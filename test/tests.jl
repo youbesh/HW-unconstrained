@@ -5,6 +5,9 @@ context("basics") do
 
 	facts("Test Data Construction") do
 
+		# fails:
+		@fact 3 --> 1
+
 
 	end
 
@@ -45,7 +48,7 @@ end
 
 context("test against GLM") do
 	# create data and use the GLM package
-	# probit example is on the github page
+	# probit example is on the github page of GLM.jl
 
 	facts("estimates vs GLM") do
 

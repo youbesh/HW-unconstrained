@@ -1,7 +1,8 @@
 
 
-module maxlike
+module HW_unconstrained
 
+	# imports: which packages are we going to use in this module?
 	using Distributions, Optim, PyPlot, DataFrames, Debug
 
 	"""
@@ -17,7 +18,7 @@ module maxlike
         return chomp(readline())
     end
 
-    export runAll, makeData
+    export maximize_like_grad, runAll, makeData
 
 
 
@@ -25,18 +26,17 @@ module maxlike
 	# -----------------
 
 	# data creator
-	# should/could return a dict with beta,numobs,X,y,norm
-	# true coeff vector, number of obs, data matrix X (Nxk), response vector y (binary), and a type of parametric distribution; i.e. the standard normal in our case.
+	# should/could return a dict with beta,numobs,X,y,norm)
+	# true coeff vector, number of obs, data matrix X, response vector y, and a type of parametric distribution for G.
 	function makeData(n=10000)
 		beta = [ 1; 1.5; -0.5 ]
-		# your turn
+
 	end
 
 
 	# log likelihood function at x
-	# function loglik(betas::Vector,d::Dict) 
+	# function loglik(betas::Vector,X::Matrix,y::Vector,distrib::UnivariateDistribution) 
 	function loglik(betas::Vector,d::Dict)
-                  
 
 	end
 
@@ -59,7 +59,6 @@ module maxlike
 	standard errors
 	"""
 	function se(betas::Vector,d::Dict)
-		sqrt(diag(inv_observedInfo(betas,d)))
 	end
 
 	# function that maximizes the log likelihood without the gradient
@@ -74,17 +73,9 @@ module maxlike
 	function maximize_like_grad(x0=[0.8,1.0,-0.1],meth=:bfgs)
 	end
 
-	# function that maximizes the log likelihood with the gradient
-	# and hessian with a call to `optimize` and returns the result
 	function maximize_like_grad_hess(x0=[0.8,1.0,-0.1],meth=:newton)
 	end
 
-	# function that maximizes the log likelihood with the gradient
-	# and computes the standard errors for the estimates
-	# should return a dataframe with 3 rows
-	# first column should be parameter names
-	# second column "Estimates"
-	# third column "StandardErrors"
 	function maximize_like_grad_se(x0=[0.8,1.0,-0.1],meth=:bfgs)
 	end
 
@@ -95,14 +86,15 @@ module maxlike
 	# function that plots the likelihood
 	# we are looking for a figure with 3 subplots, where each subplot
 	# varies one of the parameters, holding the others fixed at the true value
-	# we want to see whether there is a global minimum of the likelihood at the true value.
+	# we want to see whether there is a global minimum of the likelihood at the the true value.
 	function plotLike()
+	end
+	function plotGrad()
 	end
 
 
-
-
 	function runAll()
+
 		plotLike()
 		m1 = maximize_like()
 		m2 = maximize_like_grad()

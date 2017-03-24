@@ -2,12 +2,9 @@
 
 module maxlikeTest
 
-using FactCheck, HW_unconstrained, GLM, DataFrames
+using Base.Test, Unconstrained, GLM, DataFrames
 
 include("tests.jl")
-
-FactCheck.exitstatus()
-
 
 end
 

@@ -11,13 +11,13 @@ cd("$home/Dropbox/teaching/ScPo/ScPo-CompEcon/HW-unconstrained")	# you need to c
 
 # include your code and test it:
 # execute both lines if you changed your code
-include("src/maxlike.jl")
+include("src/HW_unconstrained.jl")
 include("test/runtests.jl")
 
 
 # use your code in the console
 # after doing include("src/maxlike.jl"),
 # your module is visible, along with all objects that you decided to export. e.g. you could do
-using maxlike
+using HW_unconstrained
 data = makeData()	
 # to manually examine this function

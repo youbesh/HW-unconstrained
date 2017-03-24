@@ -1,61 +1,50 @@
 
 
 
-context("basics") do
+@testset "basics" begin
 
-	facts("Test Data Construction") do
+	@testset "Test Data Construction" begin
 
-		# fails:
-		@fact 3 --> 1
+	end
+
+	@testset "Test Return value of likelihood" begin
 
 
 	end
 
-	facts("Test Return value of likelihood") do
-
+	@testset "Test return value of gradient" begin
 
 	end
 
-	facts("Test return value of gradient") do
+	@testset "gradient vs finite difference" begin
 		# gradient should not return anything,
 		# but modify a vector in place.
 
-
 	end
 end
 
-context("test maximization results") do
+@testset "test maximization results" begin
 
-	facts("maximize returns approximate result") do
-                              
-                     
-                                                  
+	@testset "maximize returns approximate result" begin
 	end
 
-	facts("maximize_grad returns accurate result") do
-                                   
-                     
-                                                  
+	@testset "maximize_grad returns accurate result" begin
 	end
 
-	facts("maximize_grad_hess returns accurate result") do
-                                   
-                     
-                                                  
+	@testset "gradient is close to zero at max like estimate" begin
+
 	end
 
 end
 
-context("test against GLM") do
-	# create data and use the GLM package
-	# probit example is on the github page of GLM.jl
+@testset "test against GLM" begin
 
-	facts("estimates vs GLM") do
+	@testset "estimates vs GLM" begin
 
 
 	end
 
-	facts("standard errors vs GLM") do
+	@testset "standard errors vs GLM" begin
 
 
 	end

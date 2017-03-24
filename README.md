@@ -12,7 +12,7 @@
 * Clearly there are many packaged solutions for this problem out there, which are very robust and efficient. Nevertheless it is a good exercise to try maximum likelihood out, precisely because we can compare the results to packaged solutions.
 * any non-standard maximum likelihood problem you might encounter will be very similar to the steps involved here, so there is something to learn.
 
-### testing
+### testing (optional)
 
 1. You will complete some unit tests in this homework.
 1. you should then enable your forked repo for unit testing on `Travis`.
